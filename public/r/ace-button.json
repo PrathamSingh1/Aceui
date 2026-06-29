@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ace-button",
+  "type": "registry:ui",
+  "dependencies": ["motion"],
+  "files": [
+    {
+      "path": "components/ui/ace-button.tsx",
+      "content": "PASTE THE FULL SOURCE CODE OF ace-button.tsx HERE AS A STRING",
+      "type": "registry:ui",
+      "target": "components/ui/ace-button.tsx"
+    }
+  ]
+}
