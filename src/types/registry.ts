@@ -2,6 +2,8 @@ export interface ComponentMeta {
     name: string;
     description: string;
     slug: string;
+    category: string;
+    isNew?: boolean;
     demo: React.ComponentType;
     sourceCode: string;
     registryUrl: string;

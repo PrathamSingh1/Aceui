@@ -12,6 +12,8 @@ export const registry: Record<string, ComponentMeta> = {
         name: "Ace Button",
         description: "A button with a shiny animated border and text reveal effect.",
         slug: "ace-button",
+        category: "Buttons",
+        isNew: true,
         demo: AceButtonDemo,
         sourceCode: aceButtonSource,
         registryUrl: "https://aceui.dev/r/ace-button.json",
