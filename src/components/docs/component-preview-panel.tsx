@@ -1,14 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Eye, Code2, Copy, Check, Maximize2 } from "lucide-react";
+import { Eye, Code2, Copy, Check, Maximize2, Minimize2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CodeBlock } from "@/components/ui/code-block";
 
 interface ComponentPreviewPanelProps {
   installCommand: string;
-  sourceCode: string; // ← add this
-  componentName: string; // ← add this
+  sourceCode: string;
+  componentName: string;
+  slug: string;
   children: React.ReactNode;
 }
 
@@ -16,10 +17,12 @@ export function ComponentPreviewPanel({
   installCommand,
   sourceCode,
   componentName,
+  slug,
   children,
 }: ComponentPreviewPanelProps) {
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [copied, setCopied] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   function copy() {
     navigator.clipboard.writeText(installCommand);
@@ -27,6 +30,26 @@ export function ComponentPreviewPanel({
     setTimeout(() => setCopied(false), 2000);
   }
 
+  // ── FULLSCREEN MODE ──────────────────────────────────────────
+  if (isExpanded) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+        {/* Only element: floating minimize button in top-right */}
+        <button
+          onClick={() => setIsExpanded(false)}
+          className="absolute top-4 right-4 z-10 rounded-md p-1.5 text-neutral-400 transition-colors hover:bg-neutral-800 hover:text-white"
+          title="Exit fullscreen"
+        >
+          <Minimize2 className="h-4 w-4" />
+        </button>
+
+        {/* Just the demo, nothing else */}
+        {children}
+      </div>
+    );
+  }
+
+  // normal mode
   return (
     <div className="space-y-3">
       {/* Top bar */}
@@ -54,7 +77,7 @@ export function ComponentPreviewPanel({
           ))}
         </div>
 
-        {/* CLI quick-install bar */}
+        {/* CLI bar with copy + expand */}
         <div className="flex min-w-[260px] flex-1 items-center justify-between gap-2 rounded-lg border border-neutral-200 bg-neutral-100 px-3 py-2 dark:border-neutral-800 dark:bg-neutral-900">
           <code className="truncate font-mono text-xs text-neutral-600 dark:text-neutral-300">
             {installCommand}
@@ -70,7 +93,11 @@ export function ComponentPreviewPanel({
                 <Copy className="h-3.5 w-3.5" />
               )}
             </button>
-            <button className="rounded-md p-1.5 text-neutral-400 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-800">
+            <button
+              onClick={() => setIsExpanded(true)}
+              className="rounded-md p-1.5 text-neutral-400 transition-colors hover:bg-neutral-200 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+              title="Fullscreen preview"
+            >
               <Maximize2 className="h-3.5 w-3.5" />
             </button>
           </div>
@@ -87,10 +114,10 @@ export function ComponentPreviewPanel({
         </div>
       )}
 
-      {/* Code panel — full source */}
+      {/* Code panel */}
       {tab === "code" && (
         <div id="code" className="scroll-mt-24">
-          <CodeBlock code={sourceCode} language="tsx" />
+          <CodeBlock code={sourceCode} language="tsx" expandable />
         </div>
       )}
     </div>
