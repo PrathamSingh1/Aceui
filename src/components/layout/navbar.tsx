@@ -1,4 +1,6 @@
+import { IconCommand, IconSearch, IconStar } from "@tabler/icons-react";
 import React from "react";
+import { GithubLogo } from "../icons/icons";
 
 export function Navbar() {
   return (
@@ -9,9 +11,26 @@ export function Navbar() {
           <h2 className="text-2xl font-black">Ace UI</h2>
         </div>
         <div className="flex items-center gap-8">
-          <div>Search</div>
+          {/* search */}
+          <div className="flex items-center gap-2 rounded-md border border-t-2 border-neutral-700 px-2 py-1">
+            <IconSearch className="h-4 w-4" />
+            <p>Search...</p>
+            <div className="flex items-center gap-0.5 rounded-md border border-neutral-700 bg-neutral-800 px-1 py-0">
+              <IconCommand className="h-3 w-3" />
+              <p className="text-[10px]">K</p>
+            </div>
+          </div>
           <div className="flex items-center gap-8">
-            <div>Github</div>
+            {/* github */}
+            <div className="flex">
+              <div>
+                <GithubLogo />
+              </div>
+              <div>
+                <IconStar />
+                <p>000</p>
+              </div>
+            </div>
             <div>Switch</div>
             <h2>Docs</h2>
             <h2>Templates</h2>
