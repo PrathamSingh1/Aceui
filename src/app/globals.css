@@ -8,3 +8,9 @@ html {
 section[id] {
   scroll-margin-top: 5rem; /* matches navbar height (top-14 + padding) */
 }
+
+
+@theme {
+  --color-dark: var(--color-neutral-950);
+  --color-light: var(--color-neutral-50);
+}

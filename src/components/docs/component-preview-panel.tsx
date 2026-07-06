@@ -117,7 +117,7 @@ export function ComponentPreviewPanel({
       {/* Code panel */}
       {tab === "code" && (
         <div id="code" className="scroll-mt-24">
-          <CodeBlock code={sourceCode} language="tsx" expandable />
+          <CodeBlock code={sourceCode} language="tsx" />
         </div>
       )}
     </div>
