@@ -55,7 +55,7 @@ export function ComponentPreviewPanel({
       {/* Top bar */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         {/* Preview / Code toggle */}
-        <div className="flex items-center gap-1 rounded-lg border border-neutral-200 bg-neutral-100 p-1 dark:border-neutral-800 dark:bg-neutral-900">
+        <div className="flex items-center gap-1 rounded-lg border border-neutral-200 bg-neutral-100 px-1 py-1 dark:border-neutral-800 dark:bg-neutral-900">
           {(["preview", "code"] as const).map((t) => (
             <button
               key={t}
@@ -78,35 +78,37 @@ export function ComponentPreviewPanel({
         </div>
 
         {/* CLI bar with copy + expand */}
-        <div className="flex min-w-[260px] flex-1 items-center justify-between gap-2 rounded-lg border border-neutral-200 bg-neutral-100 px-3 py-2 dark:border-neutral-800 dark:bg-neutral-900">
-          <code className="truncate font-mono text-xs text-neutral-600 dark:text-neutral-300">
-            {installCommand}
-          </code>
-          <div className="flex shrink-0 items-center gap-1">
-            <button
-              onClick={copy}
-              className="rounded-md p-1.5 text-neutral-400 transition-colors hover:bg-neutral-200 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
-            >
-              {copied ? (
-                <Check className="h-3.5 w-3.5 text-emerald-400" />
-              ) : (
-                <Copy className="h-3.5 w-3.5" />
-              )}
-            </button>
-            <button
-              onClick={() => setIsExpanded(true)}
-              className="rounded-md p-1.5 text-neutral-400 transition-colors hover:bg-neutral-200 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
-              title="Fullscreen preview"
-            >
-              <Maximize2 className="h-3.5 w-3.5" />
-            </button>
+        <div className="rounded-xl bg-neutral-200 p-1 dark:bg-[#171717]">
+          <div className="flex max-w-fit min-w-[260px] flex-1 items-center justify-between gap-2 rounded-lg border border-neutral-200 bg-neutral-100 px-2 py-1 dark:border-neutral-800 dark:bg-neutral-900">
+            <code className="truncate font-mono text-xs text-neutral-600 dark:text-neutral-300">
+              {installCommand}
+            </code>
+            <div className="flex shrink-0 items-center gap-1">
+              <button
+                onClick={copy}
+                className="rounded-md p-1.5 text-neutral-400 transition-colors hover:bg-neutral-200 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+              >
+                {copied ? (
+                  <Check className="h-3.5 w-3.5 text-emerald-400" />
+                ) : (
+                  <Copy className="h-3.5 w-3.5" />
+                )}
+              </button>
+              <button
+                onClick={() => setIsExpanded(true)}
+                className="rounded-md p-1.5 text-neutral-400 transition-colors hover:bg-neutral-200 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+                title="Fullscreen preview"
+              >
+                <Maximize2 className="h-3.5 w-3.5" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Preview panel */}
       {tab === "preview" && (
-        <div className="rounded-[24px] bg-[#171717] p-4">
+        <div className="rounded-[24px] bg-neutral-200 p-4 dark:bg-[#171717]">
           <div
             id="preview"
             className="relative flex min-h-[500px] w-full scroll-mt-24 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-950"
