@@ -35,7 +35,7 @@ export function ComponentShowcase({
   const installCommand = getShadcnAddCommand(componentName);
 
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4">
       <div id="overview" className="scroll-mt-24">
         <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
           {title}
@@ -49,6 +49,7 @@ export function ComponentShowcase({
         installCommand={installCommand}
         sourceCode={sourceCode}
         componentName={componentName}
+        slug={slug}
       >
         {children}
       </ComponentPreviewPanel>

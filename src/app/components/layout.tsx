@@ -7,7 +7,7 @@ export default function ComponentsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-light dark:bg-dark w-full flex-1 items-start px-4 md:grid md:grid-cols-[252px_24px_minmax(0,1fr)] md:gap-6 md:px-8 lg:grid-cols-[252px_24px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[252px_24px_minmax(0,1fr)_200px]">
+    <div className="bg-light dark:bg-dark w-full flex-1 items-start px-4 md:grid md:grid-cols-[252px_24px_minmax(0,1fr)] md:gap-6 md:px-8 lg:grid-cols-[252px_24px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[252px_24px_minmax(0,1fr)_150px]">
       {/* Sidebar */}
       <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 overflow-y-auto md:sticky md:block">
         <Sidebar />
@@ -37,7 +37,7 @@ export default function ComponentsLayout({
       </div>
 
       {/* Main content */}
-      <main className="bg-light dark:bg-dark relative py-3 pr-2 md:pr-4 md:pl-8 lg:py-4 lg:pl-12 xl:pl-20">
+      <main className="bg-light dark:bg-dark relative py-3 pr-4 md:pr-4 md:pl-4 lg:py-4 lg:pl-4 xl:pl-4">
         <div className="w-full min-w-0 [&>div]:max-w-6xl">{children}</div>
       </main>
 
