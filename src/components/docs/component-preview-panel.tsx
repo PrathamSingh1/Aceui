@@ -108,10 +108,10 @@ export function ComponentPreviewPanel({
 
       {/* Preview panel */}
       {tab === "preview" && (
-        <div className="rounded-[24px] bg-neutral-200 p-4 dark:bg-[#171717]">
+        <div className="rounded-xl bg-neutral-200 p-2.5 dark:bg-[#171717]">
           <div
             id="preview"
-            className="relative flex min-h-[500px] w-full scroll-mt-24 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-950"
+            className="relative flex min-h-[500px] w-full scroll-mt-24 items-center justify-center rounded-md border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-950"
           >
             {children}
           </div>

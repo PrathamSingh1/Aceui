@@ -31,7 +31,7 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-8">
           {/* search */}
-          <div className="flex items-center gap-2 rounded-md border border-t-2 border-neutral-700 px-2 py-1">
+          <div className="flex items-center gap-2 rounded-md border border-neutral-700 px-2 py-1">
             <IconSearch className="h-4 w-4" />
             <p>Search...</p>
             <div className="flex items-center gap-0.5 rounded-md border border-neutral-700 bg-neutral-800 px-1 py-0">
@@ -41,7 +41,7 @@ export function Navbar() {
           </div>
           <div className="flex items-center gap-8">
             {/* github */}
-            <div className="flex items-center gap-2 rounded-2xl border border-t-2 border-neutral-800 px-2 py-1">
+            <div className="flex items-center gap-2 rounded-2xl border border-neutral-900 px-2 py-1">
               <div className="flex gap-2">
                 <GithubLogo />
                 <span className="border-r border-r-neutral-800"></span>
