@@ -23,7 +23,7 @@ export function Sidebar() {
   const installationActive = docsNav.some((item) => pathname === item.href);
 
   return (
-    <nav className="w-full space-y-6 text-sm">
+    <nav className="mt-4 w-full space-y-6 text-sm">
       {/* Installation */}
       <div>
         <div
