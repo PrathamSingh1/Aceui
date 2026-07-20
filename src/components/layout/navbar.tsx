@@ -23,7 +23,7 @@ export function Navbar() {
     return <button className="h-5 w-5" aria-label="Toggle theme"></button>;
   }
   return (
-    <div className="bg-light dark:bg-dark h-[65px] w-full">
+    <div className="bg-light dark:bg-dark sticky top-0 right-0 left-0 z-50 h-[65px] w-full">
       <div className="flex h-full items-center justify-between border-b border-neutral-800 px-8 text-sm font-[500] text-neutral-400">
         <div>
           {/* logo */}
