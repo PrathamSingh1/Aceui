@@ -28,16 +28,16 @@ export function Sidebar() {
       <div>
         <div
           className={cn(
-            "mb-2 flex items-center justify-between rounded-lg px-2 hover:bg-neutral-800",
-            installationActive && "bg-neutral-800",
+            "mb-2 flex items-center justify-between rounded-lg px-2 text-neutral-800 transition-colors duration-200 hover:bg-neutral-300 hover:text-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-200",
+            installationActive && "bg-neutral-200 dark:bg-neutral-800",
           )}
         >
           <div className="flex items-center px-2 py-1.5">
             <DownloadLogo />
             <p
               className={cn(
-                "px-2 text-sm font-semibold text-neutral-400",
-                installationActive && "text-light",
+                "px-2 text-sm font-semibold",
+                installationActive && "dark:text-light text-neutral-800",
               )}
             >
               Installation
@@ -54,8 +54,8 @@ export function Sidebar() {
                 className={cn(
                   "mx-8 block w-[80%] rounded-lg px-2 py-1 text-sm transition-colors",
                   pathname === item.href
-                    ? "text-light bg-neutral-800 font-medium"
-                    : "text-neutral-400 hover:bg-neutral-800 hover:text-neutral-200",
+                    ? "dark:text-light bg-neutral-200 font-medium text-neutral-800 dark:bg-neutral-800"
+                    : "text-neutral-400 hover:bg-neutral-200 hover:text-neutral-800 dark:hover:bg-neutral-800 dark:hover:text-neutral-200",
                 )}
               >
                 {item.label}
@@ -74,13 +74,13 @@ export function Sidebar() {
           <div key={category.name}>
             <div
               className={cn(
-                "mb-2 flex items-center justify-between rounded-lg px-2 hover:bg-neutral-800",
-                categoryActive && "bg-neutral-800",
+                "mb-2 flex items-center justify-between rounded-lg px-2 hover:bg-neutral-200 dark:hover:bg-neutral-800",
+                categoryActive && "bg-neutral-200 dark:bg-neutral-800",
               )}
             >
               <div className="flex items-center px-2 py-1.5">
                 <HandClickLogo />
-                <p className="text-light px-2 text-sm font-semibold">
+                <p className="dark:text-light px-2 text-sm font-semibold text-neutral-800">
                   {category.name}
                 </p>
               </div>
@@ -94,8 +94,8 @@ export function Sidebar() {
                     className={cn(
                       "mx-8 flex w-[80%] items-center justify-between rounded-lg px-2 py-1 text-sm transition-colors",
                       pathname === `/components/${item.slug}`
-                        ? "text-light bg-neutral-800 font-medium"
-                        : "text-neutral-400 hover:bg-neutral-900 hover:text-neutral-200",
+                        ? "dark:text-light bg-neutral-200 font-medium text-neutral-800 dark:bg-neutral-800"
+                        : "text-neutral-800 hover:bg-neutral-200 hover:text-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800",
                     )}
                   >
                     <span>{item.name}</span>
