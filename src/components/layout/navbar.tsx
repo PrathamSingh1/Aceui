@@ -25,19 +25,19 @@ export function Navbar() {
   }
   return (
     <div className="bg-light dark:bg-dark sticky top-0 right-0 left-0 z-50 h-[65px] w-full">
-      <div className="flex h-full items-center justify-between border-b border-neutral-800 px-8 text-sm font-[500] text-neutral-400">
+      <div className="flex h-full items-center justify-between border-b border-neutral-800 px-8 text-sm font-[500] text-neutral-800 dark:text-neutral-400">
         <div>
           {/* logo */}
           <Link href="/">
-            <h2 className="text-2xl font-black">Ace UI</h2>
+            <h2 className="text-3xl font-bold">Ace UI</h2>
           </Link>
         </div>
         <div className="flex items-center gap-8">
           {/* search */}
-          <div className="flex items-center gap-2 rounded-md border border-neutral-700 px-2 py-1">
+          <div className="dark:bg-dark flex items-center gap-2 rounded-lg border border-neutral-200 bg-neutral-100 px-2 py-1 shadow-xs dark:border-neutral-700">
             <IconSearch className="h-4 w-4" />
             <p>Search...</p>
-            <div className="flex items-center gap-0.5 rounded-md border border-neutral-700 bg-neutral-800 px-1 py-0">
+            <div className="flex items-center gap-0.5 rounded-md border border-neutral-200 px-1 py-0 shadow-sm dark:border-neutral-700 dark:bg-neutral-800">
               <IconCommand className="h-3 w-3" />
               <p className="text-[10px]">K</p>
             </div>

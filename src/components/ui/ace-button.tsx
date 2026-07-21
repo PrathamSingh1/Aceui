@@ -18,7 +18,15 @@ export function AceButton({
 }: AceButtonProps) {
   const Component = (motion as any)[as] ?? motion.button;
 
-  return <button className={cn("bg-neutral-700")}>Button</button>;
+  return (
+    <button
+      className={cn(
+        "text-md cursor-pointer rounded-lg bg-neutral-800 px-6 py-2 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-800",
+      )}
+    >
+      Button
+    </button>
+  );
 }
 
 AceButton.displayName = "AceButton";
