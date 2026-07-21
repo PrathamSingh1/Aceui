@@ -37,10 +37,14 @@ export function ComponentShowcase({
   return (
     <div className="w-full space-y-4">
       <div id="overview" className="scroll-mt-24">
-        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
+        <p className="mb-2 text-sm">
+          <span className="dark:text-neutral-400">Components / </span>
+          {title}
+        </p>
+        <h1 className="text-4xl font-bold text-neutral-900 dark:text-neutral-200 dark:text-shadow-md">
           {title}
         </h1>
-        <p className="mt-2 text-lg text-neutral-500 dark:text-neutral-400">
+        <p className="text-md mt-2 text-neutral-500 dark:text-neutral-400">
           {description}
         </p>
       </div>

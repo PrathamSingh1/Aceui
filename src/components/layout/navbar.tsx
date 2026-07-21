@@ -10,6 +10,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { GithubLogo } from "../icons/icons";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -27,7 +28,9 @@ export function Navbar() {
       <div className="flex h-full items-center justify-between border-b border-neutral-800 px-8 text-sm font-[500] text-neutral-400">
         <div>
           {/* logo */}
-          <h2 className="text-2xl font-black">Ace UI</h2>
+          <Link href="/">
+            <h2 className="text-2xl font-black">Ace UI</h2>
+          </Link>
         </div>
         <div className="flex items-center gap-8">
           {/* search */}
@@ -64,9 +67,11 @@ export function Navbar() {
             <h2>Docs</h2>
             <div className="h-4 border-r border-neutral-600"></div>
             <h2>Templates</h2>
-            <button className="cursor-pointer rounded-lg border border-neutral-300 bg-neutral-200 px-2 py-2 font-semibold text-neutral-800 text-shadow-lg hover:bg-neutral-300 active:scale-[0.97]">
-              All Component
-            </button>
+            <Link href="/components">
+              <button className="cursor-pointer rounded-lg border border-neutral-300 bg-neutral-200 px-2 py-2 font-semibold text-neutral-800 text-shadow-lg hover:bg-neutral-300 active:scale-[0.97]">
+                All Component
+              </button>
+            </Link>
           </div>
         </div>
       </div>
