@@ -21,7 +21,8 @@ export function AceButton({
   return (
     <button
       className={cn(
-        "text-md cursor-pointer rounded-lg bg-neutral-800 px-6 py-2 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-800",
+        "text-md cursor-pointer rounded-lg bg-[hsl(190_60%_45%)] px-6 py-2 text-neutral-200 shadow-[inset_3px_2px_10px_hsl(150_70%_60%)] transition-colors duration-200 hover:bg-[hsl(190_60%_40%)] active:scale-[0.97] dark:bg-[hsl(190_50%_40%)] dark:text-neutral-900 dark:hover:bg-[hsl(190_50%_35%)]",
+        className,
       )}
     >
       Button
