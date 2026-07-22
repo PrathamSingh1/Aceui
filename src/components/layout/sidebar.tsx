@@ -95,7 +95,7 @@ export function Sidebar() {
                       "mx-8 flex w-[80%] items-center justify-between rounded-lg px-2 py-1 text-sm transition-colors",
                       pathname === `/components/${item.slug}`
                         ? "dark:text-light bg-neutral-200 font-medium text-neutral-800 dark:bg-neutral-800"
-                        : "text-neutral-800 hover:bg-neutral-200 hover:text-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800",
+                        : "text-neutral-800 hover:bg-neutral-200 hover:text-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-400",
                     )}
                   >
                     <span>{item.name}</span>
