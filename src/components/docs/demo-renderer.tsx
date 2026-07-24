@@ -16,6 +16,13 @@ const DEMO_COMPONENTS: Record<string, React.ComponentType> = {
       })),
     { ssr: false, loading: LOADING },
   ),
+  "shadow-button": dynamic(
+    () =>
+      import("@/components/docs/shadow-button-demo").then((m) => ({
+        default: m.ShadowButtonDemo,
+      })),
+    { ssr: false, loading: LOADING },
+  ),
 };
 
 export function DemoRenderer({ slug }: { slug: string }) {

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shadow-button",
+  "type": "registry:ui",
+  "dependencies": [""],
+  "files": [
+    {
+      "path": "components/ui/shadow-button.tsx",
+      "content": "PASTE THE FULL SOURCE CODE OF glass-premium-button.tsx HERE AS A STRING",
+      "type": "registry:ui",
+      "target": "components/ui/shadow-button.tsx"
+    }
+  ]
+}
