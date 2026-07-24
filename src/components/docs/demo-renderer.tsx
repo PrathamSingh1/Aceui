@@ -23,6 +23,13 @@ const DEMO_COMPONENTS: Record<string, React.ComponentType> = {
       })),
     { ssr: false, loading: LOADING },
   ),
+  "blue-tonned-button": dynamic(
+    () =>
+      import("@/components/docs/blue-tonned-button-demo").then((m) => ({
+        default: m.BlueTonnedButtonDemo,
+      })),
+    { ssr: false, loading: LOADING },
+  ),
 };
 
 export function DemoRenderer({ slug }: { slug: string }) {
