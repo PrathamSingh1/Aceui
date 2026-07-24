@@ -33,7 +33,7 @@ export function ShadowButton({
     >
       <div
         className={cn(
-          "rounded-lg px-10 py-3",
+          "rounded-lg px-8 py-1.5",
           // Ligt mode colors
           "bg-gradient-to-b from-white to-[#fafaf4]",
           "shadow-[inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_2px_rgba(0,0,0,0.05)]",
