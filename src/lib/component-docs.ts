@@ -6,13 +6,13 @@ export interface ComponentDocData {
 }
 
 export const COMPONENT_DOCS: Record<string, ComponentDocData> = {
-    "ace-button": {
-        dependencies: "npm install motion clsx tailwind-merge",
+    "glass-premium-button": {
+        dependencies: "npm install clsx tailwind-merge",
         includeUtils: true,
-        usageCode: `import { AceButton } from "@/components/ui/ace-button"
+        usageCode: `import { GlassPremiumButton } from "@/components/ui/glass-premium-button"
 
 export function Demo() {
-  return <AceButton>Get Started</AceButton>
+  return <GlassPremiumButton>Get Started</GlassPremiumButton>
 }`,
         props: [
             { prop: "children", type: "React.ReactNode", defaultValue: "'Click me'", description: "Content inside the button." },

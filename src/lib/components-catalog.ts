@@ -15,7 +15,7 @@ export const COMPONENT_CATEGORIES: ComponentCategory[] = [
     {
         name: "Buttons",
         items: [
-            { name: "Ace Button", slug: "ace-button", description: "Animated border sweep button", componentName: "ace-button", isNew: true },
+            { name: "Glass Premium Button", slug: "glass-premium-button", description: "Glossy gradient button with soft glow and gradient", componentName: "glass-premium-button", isNew: true },
         ],
     },
 ];

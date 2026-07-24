@@ -9,10 +9,10 @@ const LOADING = () => (
 );
 
 const DEMO_COMPONENTS: Record<string, React.ComponentType> = {
-  "ace-button": dynamic(
+  "glass-premium-button": dynamic(
     () =>
-      import("@/components/docs/ace-button-demo").then((m) => ({
-        default: m.AceButtonDemo,
+      import("@/components/docs/glass-premium-button-demo").then((m) => ({
+        default: m.GlassPremiumButtonDemo,
       })),
     { ssr: false, loading: LOADING },
   ),
