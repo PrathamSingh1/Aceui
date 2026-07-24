@@ -8,11 +8,13 @@ export interface GlassPremiumButtonProps extends HTMLMotionProps<"button"> {
   children?: React.ReactNode;
   /** Render as a different motion element, e.g. "a", "div" */
   as?: keyof typeof motion;
+  onClick?: () => void;
 }
 
 export function GlassPremiumButton({
   children = "Click me",
   className,
+  onClick,
   as = "button",
   ...rest
 }: GlassPremiumButtonProps) {
@@ -20,6 +22,7 @@ export function GlassPremiumButton({
 
   return (
     <button
+      onClick={onClick}
       className={cn(
         "text-md cursor-pointer rounded-full p-[3px] shadow-lg shadow-teal-200/20 transition-colors duration-200 active:scale-[0.99]",
 
