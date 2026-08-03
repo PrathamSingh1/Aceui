@@ -21,10 +21,10 @@ export function ShadowButton({
       className={cn(
         "cursor-pointer rounded-xl p-1",
 
-        "bg-gradient-to-b from-white to-[#f0f0ef]",
+        "bg-linear-to-b from-white to-[#f0f0ef]",
         "shadow-[0_1px_1px_rgba(0,0,0,0.04),0_6px_14px_-4px_rgba(0,0,0,0.12)]",
 
-        "dark:bg-gradient-to-b dark:from-[#3a3a3a] dark:to-[#262626]",
+        "dark:bg-linear-to-b dark:from-[#3a3a3a] dark:to-[#262626]",
         "dark:shadow-[0_1px_1px_rgba(0,0,0,0.4),0_6px_14px_-4px_rgba(0,0,0,0.5)]",
         "transition-transform duration-150 active:scale-[0.98]",
         className,
@@ -35,10 +35,10 @@ export function ShadowButton({
         className={cn(
           "rounded-lg px-8 py-1.5",
           // Ligt mode colors
-          "bg-gradient-to-b from-white to-[#fafaf4]",
+          "bg-linear-to-b from-white to-[#fafaf4]",
           "shadow-[inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_2px_rgba(0,0,0,0.05)]",
           // Dark mode colors
-          "dark:bg-gradient-to-b dark:from-[#333333] dark:to-[#2a2a2a]",
+          "dark:bg-linear-to-b dark:from-[#333333] dark:to-[#2a2a2a]",
           "dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),inset_0_-1px_2px_rgba(0,0,0,0.4)]",
         )}
       >
