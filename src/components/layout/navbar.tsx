@@ -32,7 +32,7 @@ export function Navbar() {
             <h2 className="text-xl font-[700] leading-[28px] text-neutral-800 dark:text-neutral-100">Ace UI</h2>
           </Link>
         </div>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4">
           {/* search */}
           <div className="dark:bg-dark flex items-center gap-2 rounded-lg bg-neutral-100 px-2 py-1 shadow-[inset_0_0_0_1px_hsl(0_0%_85%)] dark:shadow-[inset_0_0_0_1.2px_hsl(0_0%_20%)]">
             <IconSearch className="h-4 w-4" />
@@ -42,15 +42,15 @@ export function Navbar() {
               <p className="text-[10px]">K</p>
             </div>
           </div>
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4">
             {/* github */}
-            <div className="flex items-center gap-2 rounded-2xl border border-neutral-300 px-2 py-1 dark:border-neutral-900">
+            <div className="flex items-center gap-2 rounded-2xl border border-neutral-300 px-2 py-1 dark:border-neutral-900 group cursor-pointer">
               <div className="flex gap-2">
                 <GithubLogo />
                 <span className="border-r border-r-neutral-800"></span>
               </div>
               <div className="flex items-center gap-1">
-                <IconStar className="h-4 w-4 fill-neutral-600 stroke-neutral-600" />
+                <IconStar className="h-4 w-4 dark:fill-neutral-600 fill-neutral-400 dark:stroke-neutral-600 stroke-neutral-400 group-hover:fill-amber-500 group-hover:stroke-amber-500 transition-all duration-200" />
                 <p>000</p>
               </div>
             </div>
@@ -67,9 +67,13 @@ export function Navbar() {
               )}
               </button>
             </div>
-            <h2>Docs</h2>
+            <div className="px-3 py-2 hover:bg-neutral-800 rounded-md cursor-pointer transition-colors duration-200 -mr-2">
+              <h2>Docs</h2>
+            </div>
             <div className="h-4 border-r border-neutral-600"></div>
-            <h2>Templates</h2>
+            <div className="px-3 py-2 hover:bg-neutral-800 rounded-md cursor-pointer transition-colors duration-200 -ml-2">
+              <h2>Templates</h2>
+            </div>
             <Link href="/components">
               <button className="cursor-pointer rounded-lg border border-neutral-300 bg-neutral-200 px-2 py-2 font-semibold text-neutral-800 text-shadow-lg hover:bg-neutral-300 active:scale-[0.97]">
                 All Component
