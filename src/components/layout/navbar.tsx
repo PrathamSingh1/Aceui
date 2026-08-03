@@ -67,11 +67,11 @@ export function Navbar() {
               )}
               </button>
             </div>
-            <div className="px-3 py-2 hover:bg-neutral-800 rounded-md cursor-pointer transition-colors duration-200 -mr-2">
+            <div className="px-3 py-2 dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-md cursor-pointer transition-colors duration-200 -mr-2">
               <h2>Docs</h2>
             </div>
             <div className="h-4 border-r border-neutral-600"></div>
-            <div className="px-3 py-2 hover:bg-neutral-800 rounded-md cursor-pointer transition-colors duration-200 -ml-2">
+            <div className="px-3 py-2 dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-md cursor-pointer transition-colors duration-200 -ml-2">
               <h2>Templates</h2>
             </div>
             <Link href="/components">
