@@ -11,7 +11,7 @@ type ButtonProps = {
 
 const variantStyles = {
   primary:
-    "bg-linear-to-b from-[hsl(0deg_0%_10%)] to-[hsl(0deg_0%_5%)] shadow-[inset_0_0_4px_2px_hsl(360deg_5%_80%)] dark:from-[hsl(0deg_0%_90%)] dark:to-[hsl(0deg_0%_85%)] dark:shadow-[inset_0_0_5px_1px_hsl(360deg_0%_10%)] text-white hover:bg-blue-700 active:bg-blue-800 dark:text-neutral-800 border-2 border-neutral-600 dark:border-neutral-400",
+    "bg-linear-to-b from-[hsl(0deg_0%_10%)] to-[hsl(0deg_0%_5%)] shadow-[inset_0_0_5px_0.5px_hsl(360deg_5%_80%)] dark:from-[hsl(0deg_0%_90%)] dark:to-[hsl(0deg_0%_85%)] dark:shadow-[inset_0_0_5px_0.5px_hsl(360deg_0%_10%)] text-white hover:bg-blue-700 active:bg-blue-800 dark:text-neutral-800 border-2 border-neutral-600 dark:border-neutral-400",
   secondary:
     "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-900 border-2 border-neutral-200 dark:bg-neutral-950 dark:text-neutral-100 dark:hover:bg-neutral-900 dark:border-neutral-800",
 };
