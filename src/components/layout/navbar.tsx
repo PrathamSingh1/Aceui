@@ -84,7 +84,7 @@ export function Navbar() {
               <h2>Templates</h2>
             </div>
             <Link href={`/components`}>
-              <Button className="flex items-center gap-2">
+              <Button className="flex items-center gap-2 px-2.5 py-2.5">
                 All Components
                 <IconComponents size={16} />
               </Button>
