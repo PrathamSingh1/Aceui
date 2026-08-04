@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -11,9 +11,9 @@ type ButtonProps = {
 
 const variantStyles = {
   primary:
-    "bg-linear-to-b from- text-white hover:bg-blue-700 active:bg-blue-800 border border-transparent",
+    "bg-linear-to-b from-[hsl(0deg_0%_10%)] to-[hsl(0deg_0%_5%)] shadow-[inset_0_0_4px_2px_hsl(360deg_5%_80%)] dark:from-[hsl(0deg_0%_90%)] dark:to-[hsl(0deg_0%_85%)] dark:shadow-[inset_0_0_5px_1px_hsl(360deg_0%_10%)] text-white hover:bg-blue-700 active:bg-blue-800 dark:text-neutral-800 border-2 border-neutral-600 dark:border-neutral-400",
   secondary:
-    "bg-white text-blue-600 hover:bg-blue-50 active:bg-blue-100 border border-blue-600",
+    "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-900 border-2 border-neutral-200 dark:bg-neutral-950 dark:text-neutral-100 dark:hover:bg-neutral-900 dark:border-neutral-800",
 };
 
 export const Button = ({
@@ -28,9 +28,9 @@ export const Button = ({
       onClick={onClick}
       disabled={disabled}
       className={cn(
-        "inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+        "inline-flex cursor-pointer items-center justify-center rounded-lg px-4 py-3 text-sm font-medium transition-colors active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50",
         variantStyles[variant],
-        className
+        className,
       )}
     >
       {children}
