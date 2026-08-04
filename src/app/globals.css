@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --scrollbarbg: hsl(216, 8%, 88%);
+  --scrollbarthumb: hsl(192, 3%, 61%);
+  --scrollbarborder: hsl(180, 5%, 83%);
+}
+
+.dark {
+  --scrollbarbg: hsl(210deg, 15%, 6.25%);
+  --scrollbarthumb: hsl(214, 6%, 23%);
+  --scrollbarborder: hsl(180, 8%, 3%);
+}
 
 html {
   scroll-behavior: smooth;
@@ -15,3 +26,21 @@ section[id] {
   --color-dark: var(--color-neutral-950);
   --color-light: var(--color-neutral-50);
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--scrollbarbg);
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1000px;
+    background-color: var(--scrollbarthumb);
+    border: 2px solid var(--scrollbarborder);
+  }
+  /*
+    on non-Firefox browsers,
+    the thumb will light up on hover!
+  */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--gray-500);
+  }
