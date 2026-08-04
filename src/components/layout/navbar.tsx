@@ -34,7 +34,7 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           {/* search */}
-          <div className="dark:bg-dark flex items-center gap-2 rounded-lg bg-neutral-100 px-2 py-1 shadow-[inset_0_0_0_1px_hsl(0_0%_85%)] dark:shadow-[inset_0_0_0_1.2px_hsl(0_0%_20%)]">
+          <div className="dark:bg-dark flex items-center gap-2 rounded-lg bg-neutral-100 px-2 py-1.5 shadow-[inset_0_0_0_1px_hsl(0_0%_85%)] dark:shadow-[inset_0_0_0_1.2px_hsl(0_0%_20%)]">
             <IconSearch className="h-4 w-4" />
             <p>Search...</p>
             <div className="flex items-center gap-0.5 rounded-md border border-neutral-200 px-1 py-0 shadow-sm dark:border-neutral-700 dark:bg-neutral-800">
