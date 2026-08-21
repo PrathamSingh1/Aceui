@@ -1,0 +1,44 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "aceui",
+  "homepage": "https://aceui.prathamm.in",
+  "items": [
+    {
+      "name": "blue-tonned-button",
+      "type": "registry:ui",
+      "title": "Blue Tonned Button",
+      "description": "Blue gradient button with layered shadow",
+      "files": [
+        {
+          "path": "src/components/ui/blue-tonned-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shadow-button",
+      "type": "registry:ui",
+      "title": "Shadow Button",
+      "description": "Shadow button with inner shadow and box shadow",
+      "files": [
+        {
+          "path": "src/components/ui/shadow-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-premium-button",
+      "type": "registry:ui",
+      "title": "Glass Premium Button",
+      "description": "Glossy gradient button with soft glow",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "src/components/ui/glass-premium-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

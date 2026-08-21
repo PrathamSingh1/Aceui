@@ -1,14 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-premium-button",
-  "type": "registry:ui",
-  "dependencies": [""],
+  "title": "Glass Premium Button",
+  "description": "Glossy gradient button with soft glow",
+  "dependencies": [
+    "motion"
+  ],
   "files": [
     {
-      "path": "components/ui/glass-premium-button.tsx",
-      "content": "PASTE THE FULL SOURCE CODE OF glass-premium-button.tsx HERE AS A STRING",
-      "type": "registry:ui",
-      "target": "components/ui/glass-premium-button.tsx"
+      "path": "src/components/ui/glass-premium-button.tsx",
+      "content": "\"use client\";\r\n\r\nimport React from \"react\";\r\nimport { motion, type HTMLMotionProps } from \"motion/react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport interface GlassPremiumButtonProps extends HTMLMotionProps<\"button\"> {\r\n  children?: React.ReactNode;\r\n  /** Render as a different motion element, e.g. \"a\", \"div\" */\r\n  as?: keyof typeof motion;\r\n  onClick?: () => void;\r\n}\r\n\r\nexport function GlassPremiumButton({\r\n  children = \"Click me\",\r\n  className,\r\n  onClick,\r\n  as = \"button\",\r\n  ...rest\r\n}: GlassPremiumButtonProps) {\r\n  const Component = (motion as any)[as] ?? motion.button;\r\n\r\n  return (\r\n    <button\r\n      onClick={onClick}\r\n      className={cn(\r\n        \"text-md cursor-pointer rounded-full p-[3px] shadow-lg shadow-teal-200/20 transition-colors duration-200 active:scale-[0.99]\",\r\n\r\n        \"bg-linear-to-b from-[#F4F4F4] via-[#565656] to-[#93B3AE]\",\r\n\r\n        className,\r\n      )}\r\n    >\r\n      <div\r\n        className={cn(\r\n          \"rounded-full px-16 py-3 text-neutral-200\",\r\n\r\n          \"bg-linear-to-b from-[#D5D8D8] to-[#818C8A] dark:bg-linear-to-b\",\r\n\r\n          className,\r\n        )}\r\n      >\r\n        <span\r\n          className={cn(\r\n            \"bg-[linear-gradient(to_bottom,#252424_0%,#3C3C3C_100%)] bg-clip-text text-transparent\",\r\n            className,\r\n          )}\r\n        >\r\n          {children || \"Button\"}\r\n        </span>\r\n      </div>\r\n    </button>\r\n  );\r\n}\r\n\r\nGlassPremiumButton.displayName = \"GlassPremiumButton\";\r\n\r\nexport default GlassPremiumButton;\r\n",
+      "type": "registry:ui"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

@@ -1,14 +1,14 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "blue-tonned-button",
-  "type": "registry:ui",
-  "dependencies": [""],
+  "title": "Blue Tonned Button",
+  "description": "Blue gradient button with layered shadow",
   "files": [
     {
-      "path": "components/ui/blue-tonned-button.tsx",
-      "content": "PASTE THE FULL SOURCE CODE OF glass-premium-button.tsx HERE AS A STRING",
-      "type": "registry:ui",
-      "target": "components/ui/blue-tonned-button.tsx"
+      "path": "src/components/ui/blue-tonned-button.tsx",
+      "content": "\"use client\";\r\n\r\nimport React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport interface BlueTonnedButtonProps {\r\n  children?: React.ReactNode;\r\n  className?: string;\r\n  onClick?: () => void;\r\n}\r\n\r\nexport function BlueTonnedButton({\r\n  children = \"Welcome :)\",\r\n  className,\r\n  onClick,\r\n  ...rest\r\n}: BlueTonnedButtonProps) {\r\n  return (\r\n    <button\r\n      onClick={onClick}\r\n      className={cn(\r\n        \"cursor-pointer rounded-xl px-8 py-3\",\r\n\r\n        \"dark:bg-gradient-to-b dark:from-[#0A0A0A] dark:to-[#0D101F]\",\r\n\r\n        \"dark:shadow-[inset_0_-8px_6px_-2px_#144CCD,inset_0_-4px_3px_-8px_rgba(102,148,255,0.5),inset_0_-2px_2px_-6px_rgba(255,255,255,0.4),inset_0_0_8px_-2px_rgba(35,99,255,0.15)]\",\r\n\r\n        \"dark:hover:shadow-[inset_0_-8px_7px_-2px_#144CCD,inset_0_-4px_3px_-8px_rgba(102,148,255,0.5),inset_0_-2px_2px_-6px_rgba(255,255,255,0.4),inset_0_0_8px_-2px_rgba(35,99,255,0.15)]\",\r\n\r\n        \"hover:shadow-[inset_0_-8px_7px_-2px_#144CCD,inset_0_-4px_3px_-8px_rgba(102,148,255,0.5),inset_0_-2px_2px_-6px_rgba(255,255,255,0.4),inset_0_0_8px_-2px_rgba(35,99,255,0.15)]\",\r\n\r\n        \"transition-all duration-150 dark:hover:brightness-110\",\r\n\r\n        \"shadow-[inset_0_-8px_8px_-2px_#145CCD,inset_0_-4px_3px_-8px_rgba(102,148,255,0.5),inset_0_-2px_2px_-6px_rgba(255,255,255,0.4),inset_0_0_8px_-2px_rgba(35,99,255,0.15)]\",\r\n\r\n        \"active:scale-[0.98]\",\r\n        className,\r\n      )}\r\n      {...rest}\r\n    >\r\n      <span className=\"bg-neutral-800/80 bg-clip-text text-transparent dark:bg-neutral-200/80\">\r\n        {children}\r\n      </span>\r\n    </button>\r\n  );\r\n}\r\n\r\nBlueTonnedButton.displayName = \"BlueTonnedButton\";\r\n\r\nexport default BlueTonnedButton;\r\n",
+      "type": "registry:ui"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

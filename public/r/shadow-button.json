@@ -1,14 +1,14 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "shadow-button",
-  "type": "registry:ui",
-  "dependencies": [""],
+  "title": "Shadow Button",
+  "description": "Shadow button with inner shadow and box shadow",
   "files": [
     {
-      "path": "components/ui/shadow-button.tsx",
-      "content": "PASTE THE FULL SOURCE CODE OF glass-premium-button.tsx HERE AS A STRING",
-      "type": "registry:ui",
-      "target": "components/ui/shadow-button.tsx"
+      "path": "src/components/ui/shadow-button.tsx",
+      "content": "\"use client\";\r\n\r\nimport React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport interface ShadowButtonProps {\r\n  children?: React.ReactNode;\r\n  className?: string;\r\n  onClick?: () => void;\r\n}\r\n\r\nexport function ShadowButton({\r\n  children = \"Hello, there!\",\r\n  className,\r\n  onClick,\r\n  ...rest\r\n}: ShadowButtonProps) {\r\n  return (\r\n    <button\r\n      onClick={onClick}\r\n      className={cn(\r\n        \"cursor-pointer rounded-xl p-1\",\r\n\r\n        \"bg-linear-to-b from-white to-[#f0f0ef]\",\r\n        \"shadow-[0_1px_1px_rgba(0,0,0,0.04),0_6px_14px_-4px_rgba(0,0,0,0.12)]\",\r\n\r\n        \"dark:bg-linear-to-b dark:from-[#3a3a3a] dark:to-[#262626]\",\r\n        \"dark:shadow-[0_1px_1px_rgba(0,0,0,0.4),0_6px_14px_-4px_rgba(0,0,0,0.5)]\",\r\n        \"transition-transform duration-150 active:scale-[0.98]\",\r\n        className,\r\n      )}\r\n      {...rest}\r\n    >\r\n      <div\r\n        className={cn(\r\n          \"rounded-lg px-8 py-1.5\",\r\n          // Ligt mode colors\r\n          \"bg-linear-to-b from-white to-[#fafaf4]\",\r\n          \"shadow-[inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_2px_rgba(0,0,0,0.05)]\",\r\n          // Dark mode colors\r\n          \"dark:bg-linear-to-b dark:from-[#333333] dark:to-[#2a2a2a]\",\r\n          \"dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),inset_0_-1px_2px_rgba(0,0,0,0.4)]\",\r\n        )}\r\n      >\r\n        <span\r\n          className={cn(\r\n            \"bg-[linear-gradient(to_bottom,#000000_0%,#2f2f2f_100%)] bg-clip-text text-lg font-semibold text-transparent\",\r\n            \"dark:bg-[linear-gradient(to_bottom,#ffffff_0%,#d4d4d4_100%)]\",\r\n          )}\r\n        >\r\n          {children}\r\n        </span>\r\n      </div>\r\n    </button>\r\n  );\r\n}\r\n\r\nShadowButton.displayName = \"ShadowButton\";\r\n\r\nexport default ShadowButton;\r\n",
+      "type": "registry:ui"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }
