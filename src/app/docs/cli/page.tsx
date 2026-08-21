@@ -24,7 +24,7 @@ export default function CliPage() {
           Use the registry URL from any component's page.
         </p>
         <CodeBlock
-          code={`npx shadcn@latest add "https://aceui.dev/r/ace-button.json"`}
+          code={`npx shadcn@latest add "https://aceui.prathamm.in/r/ace-button.json"`}
         />
       </section>
 
@@ -40,7 +40,7 @@ export default function CliPage() {
         <CodeBlock
           code={`{
   "registries": {
-    "@aceui": "https://aceui.dev/r/{name}.json"
+    "@aceui": "https://aceui.prathamm.in/r/{name}.json"
   }
 }`}
         />
